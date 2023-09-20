@@ -2,10 +2,10 @@
 
 <li class="mb-8">
 
-    <div class="items-center justify-between w-auto p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
+    <div class="items-center justify-between w-auto p-4 bg-bruh4 border border-gray-200 rounded-lg shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
 
         {{-- <time class="text-xs font-normal text-gray-400 sm:order-last">{{ $task->created_at?->diffForHumans() }}</time> --}}
-        <div class="text-sm font-normal text-gray-500 dark:text-gray-300"><span class="font-extrabold">{{ $task->title }}</span> - <a href="#" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">{{ $task->user->name }}</a></div>
+        <div class="text-sm font-normal text-black dark:text-gray-300"><span class=" font-bold">{{ $task->title }}</span> - <a href="#" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">{{ $task->user->name }}</a></div>
         <form action="/tasks/{{ $task->id }}" method="post">
             @csrf
             @method('DELETE')

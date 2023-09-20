@@ -13,8 +13,12 @@ class TaskController extends Controller
      */
     public function index()
     {
+
+        $tasks = Task::with('user')->latest('tasks.created_at')->filter(request(['search']))->get();
+
+
         return view('tasks.index', [
-            'tasks' => Task::with('user')->get(),
+            'tasks' => $tasks,
         ]);
     }
 
@@ -31,10 +35,14 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
+
         $title = $request->validate([
             'title' => 'required'
         ]);
-        $task = Task::create(['title' => $title, 'user_id' => auth()->user()->id]);
+        // dd($title['title']);
+
+        $task = Task::create(['title' => $title['title'], 'user_id' => auth()->user()->id]);
+
         $task->save();
         return redirect('/');
 

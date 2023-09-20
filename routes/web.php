@@ -4,6 +4,7 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use App\Models\Task;
 use App\Models\User;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 
 // TASK ROUTES
 // show index
@@ -52,3 +52,5 @@ Route::post('/user/login', [UserController::class, 'authenticate']);
 
 // logout user
 Route::post('user/logout', [UserController::class, 'logout']);
+
+

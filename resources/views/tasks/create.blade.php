@@ -12,7 +12,7 @@
             @endif
             <label class="block mb-3" for="title">Title: </label>
             <input class="p-1" type="text" placeholder="Mow Lawn" name="title">
-            <button class="block bg-green-800 p-2 rounded mt-2 text-sm" type="submit">Create Task!</button>
+            <button class="block bg-green-800 p-2 rounded mt-2 text-sm" type="submit">Create Task</button>
         </form>
     </div>
     </x-card>

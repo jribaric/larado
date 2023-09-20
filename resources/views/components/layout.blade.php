@@ -9,7 +9,7 @@
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <title>Laravel</title>
     </head>
-    <body class=" bg-cyan-800">
+    <body class=" bg-bruh1">
         @include('components.header')
         {{-- <a href="/create" class=" m-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">Create Task</a> --}}
         <div class="grid mt-10 place-items-center">
